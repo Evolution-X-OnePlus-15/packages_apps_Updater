@@ -27,7 +27,13 @@
     <string name="menu_export_update">განახლების გატანა</string>
     <string name="menu_metered_network_warning">შეზღუდული ქსელის გაფრთხილება</string>
     <string name="menu_ab_perf_mode">განახლებისთვის უპირატესობის მინიჭება</string>
+<<<<<<< HEAD
     <string name="menu_update_recovery">აღმდგენის განახლება</string>
+=======
+    <string name="menu_keep_current_abl">მიმდინარე ABL-ის შენარჩუნება</string>
+    <string name="menu_update_recovery">მიმდინარე აღდგენის შენარჩუნება</string>
+    <string name="toast_forced_update_recovery">ვერ გაითიშება Lineage-აღმდგენის განახლებები ამ მოწყობილობაზე.</string>
+>>>>>>> 820827b (Updater: Add option to preserve current recovery)
     <string name="snack_updates_found">ნაპოვნია განახლებები</string>
     <string name="snack_no_updates_found">განახლებები ვერ მოიძებნა</string>
     <string name="snack_download_failed">ჩამოტვირთვა ვერ მოხერხდა. გთხოვთ გადაამოწმოთ თქვენი ინტერნეტკავშირი და სცადოთ ხელახლა.</string>

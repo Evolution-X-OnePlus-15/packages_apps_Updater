@@ -62,10 +62,16 @@
     <string name="menu_metered_network_warning">Aviso de rede de acesso limitado</string>
     <string name="menu_metered_network_warning_summary">Avisar antes de transferir por dados móveis</string>
     <string name="menu_ab_perf_mode">Priorizar o processo de atualização</string>
+<<<<<<< HEAD
     <string name="menu_ab_perf_mode_summary">Acelerar atualizações ao custo de desempenho do dispositivo</string>
     <string name="menu_ab_perf_mode_summary_charging">Ativado automaticamente enquanto carrega</string>
     <string name="menu_update_recovery">Atualizar recuperação</string>
     <string name="menu_update_recovery_summary">Atualizar partição de recuperação juntamente com o SO</string>
+=======
+    <string name="menu_keep_current_abl">Manter ABL atual</string>
+    <string name="menu_update_recovery">Manter recuperação atual</string>
+    <string name="toast_forced_update_recovery">Não é possível desativar as atualizações da recuperação Evolution X neste dispositivo.</string>
+>>>>>>> 820827b (Updater: Add option to preserve current recovery)
     <string name="snack_updates_found">Não foram encontradas atualizações</string>
     <string name="snack_no_updates_found">Não foram encontradas novas atualizações</string>
     <string name="snack_download_failed">A transferência falhou. Por favor, verifique a sua ligação à internet e tente novamente.</string>

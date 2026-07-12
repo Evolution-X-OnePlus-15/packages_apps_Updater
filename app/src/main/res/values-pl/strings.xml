@@ -62,10 +62,16 @@
     <string name="menu_metered_network_warning">Ostrzeżenie o sieci z pomiarem</string>
     <string name="menu_metered_network_warning_summary">Ostrzegaj przed pobraniem poprzez dane komórkowe</string>
     <string name="menu_ab_perf_mode">Nadaj wyższy priorytet procesowi aktualizacji</string>
+<<<<<<< HEAD
     <string name="menu_ab_perf_mode_summary">Przyspieszaj aktualizacje kosztem wydajności urządzenia</string>
     <string name="menu_ab_perf_mode_summary_charging">Włączono automatycznie podczas ładowania</string>
     <string name="menu_update_recovery">Aktualizuj Recovery</string>
     <string name="menu_update_recovery_summary">Aktualizuj partycję Recovery wraz z systemem operacyjnym</string>
+=======
+    <string name="menu_keep_current_abl">Zachowaj obecny ABL</string>
+    <string name="menu_update_recovery">Zachowaj obecne Recovery</string>
+    <string name="toast_forced_update_recovery">Nie można wyłączyć aktualizacji Evolution X Recovery na tym urządzeniu.</string>
+>>>>>>> 820827b (Updater: Add option to preserve current recovery)
     <string name="snack_updates_found">Znaleziono nowe aktualizacje</string>
     <string name="snack_no_updates_found">Nie znaleziono nowych aktualizacji</string>
     <string name="snack_download_failed">Pobieranie nie powiodło się. Sprawdź połączenie z Internetem i spróbuj ponownie później.</string>

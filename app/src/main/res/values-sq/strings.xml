@@ -32,7 +32,13 @@
     <string name="menu_export_update">Eksporto përditësimin</string>
     <string name="menu_metered_network_warning">Paralajmërim i rrjetit celular</string>
     <string name="menu_ab_perf_mode">Jepi përparësi përditësimit</string>
+<<<<<<< HEAD
     <string name="menu_update_recovery">Përditëso rikuperimin</string>
+=======
+    <string name="menu_keep_current_abl">Mbaj ABL aktual</string>
+    <string name="menu_update_recovery">Mbaj rikuperimin aktual</string>
+    <string name="toast_forced_update_recovery">Është e pamundur të çaktivizoni përditësimet e rikuperimit të Lineages në këtë pajisje.</string>
+>>>>>>> 820827b (Updater: Add option to preserve current recovery)
     <string name="snack_updates_found">Ka përditësime të reja</string>
     <string name="snack_no_updates_found">Nuk u gjet asnjë përditësim i ri</string>
     <string name="snack_download_failed">Shkarkimi dështoi. Ju lutem kontrolloni për lidhjen me internetin dhe provoni sërish.</string>

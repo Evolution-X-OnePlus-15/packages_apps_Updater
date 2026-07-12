@@ -62,10 +62,16 @@
     <string name="menu_metered_network_warning">Avertissement de réseau forfaitaire</string>
     <string name="menu_metered_network_warning_summary">Avertir avant de télécharger sur les données mobiles</string>
     <string name="menu_ab_perf_mode">Privilégier le processus de mise à jour</string>
+<<<<<<< HEAD
     <string name="menu_ab_perf_mode_summary">Accélérer les mises à jour au détriment des performances de l\'appareil</string>
     <string name="menu_ab_perf_mode_summary_charging">Activé automatiquement lors de la mise en charge</string>
     <string name="menu_update_recovery">Mettre à jour la récupération</string>
     <string name="menu_update_recovery_summary">Mettre à jour la partition de récupération en même temps que le système d\'exploitation</string>
+=======
+    <string name="menu_keep_current_abl">Conserver l\'ABL actuel</string>
+    <string name="menu_update_recovery">Conserver la récupération actuelle</string>
+    <string name="toast_forced_update_recovery">Il est impossible de désactiver les mises à jour de la récupération de Evolution X sur cet appareil.</string>
+>>>>>>> 820827b (Updater: Add option to preserve current recovery)
     <string name="snack_updates_found">Nouvelles mises à jour disponibles</string>
     <string name="snack_no_updates_found">Aucune nouvelle mise à jour disponible</string>
     <string name="snack_download_failed">Le téléchargement a échoué. Vérifiez votre connexion internet et réessayez ultérieurement.</string>

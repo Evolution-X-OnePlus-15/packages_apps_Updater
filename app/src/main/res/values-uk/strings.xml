@@ -22,7 +22,14 @@
     <string name="reboot">Перезавантаження</string>
     <string name="menu_delete_update">Видалити</string>
     <string name="menu_export_update">Експорт оновлення</string>
+<<<<<<< HEAD
     <string name="menu_update_recovery">Оновити режим відновлення</string>
+=======
+    <string name="menu_show_changelog">Журнал змін</string>
+    <string name="menu_keep_current_abl">Зберегти поточний ABL</string>
+    <string name="menu_update_recovery">Зберегти поточний recovery</string>
+    <string name="toast_forced_update_recovery">Неможливо вимкнути оновлення режиму відновлення Evolution X на цьому пристрої.</string>
+>>>>>>> 820827b (Updater: Add option to preserve current recovery)
     <string name="snack_updates_found">Знайдено оновлення</string>
     <string name="snack_no_updates_found">Оновлень не знайдено</string>
     <string name="snack_download_failed">Завантаження оновлення не вдалось. Будь-ласка перевірте з’єднання з мережею і спробуйте ще раз.</string>

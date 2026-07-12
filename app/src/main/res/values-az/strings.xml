@@ -62,6 +62,7 @@
     <string name="menu_metered_network_warning">Ölçülən şəbəkə xəbərdarlığı</string>
     <string name="menu_metered_network_warning_summary">Mobil veri ilə endirərkən xəbərdarlıq et</string>
     <string name="menu_ab_perf_mode">Üstünlüyü güncəlləmə prosesinə ver</string>
+    <string name="menu_keep_current_abl">Cari ABL-i saxla</string>
     <string name="menu_ab_perf_mode_summary">Güncəlləmələri sürətləndirmək cihazın performansına təsir edir</string>
     <string name="menu_ab_perf_mode_summary_charging">Enerjisini doldurarkən avtomatik fəallaşır</string>
     <string name="menu_update_recovery">Geri qaytarma rejimini güncəllə</string>

@@ -62,10 +62,16 @@
     <string name="menu_metered_network_warning">Προειδοποίηση ογκοχρέωσης δικτύου</string>
     <string name="menu_metered_network_warning_summary">Προειδοποίηση πριν από τη λήψη μέσω δεδομένων κινητής τηλεφωνίας</string>
     <string name="menu_ab_perf_mode">Επιτάχυνση διαδικασίας ενημέρωσης</string>
+<<<<<<< HEAD
     <string name="menu_ab_perf_mode_summary">Επιτάχυνση ενημερώσεων εις βάρος των επιδόσεων της συσκευής</string>
     <string name="menu_ab_perf_mode_summary_charging">Ενεργοποιείται αυτόματα κατά τη φόρτιση με τροφοδοσία AC</string>
     <string name="menu_update_recovery">Ενημέρωση recovery</string>
     <string name="menu_update_recovery_summary">Ενημέρωση του recovery partition μαζί με το λειτουργικό σύστημα</string>
+=======
+    <string name="menu_keep_current_abl">Διατήρηση τρέχοντος ABL</string>
+    <string name="menu_update_recovery">Διατήρηση τρέχοντος recovery</string>
+    <string name="toast_forced_update_recovery">Είναι αδύνατο να απενεργοποιήσετε τις ενημερώσεις Evolution X Recovery σε αυτή τη συσκευή.</string>
+>>>>>>> 820827b (Updater: Add option to preserve current recovery)
     <string name="snack_updates_found">Βρέθηκαν νέες ενημερώσεις</string>
     <string name="snack_no_updates_found">Δεν βρέθηκαν νέες ενημερώσεις</string>
     <string name="snack_download_failed">Η λήψη απέτυχε. Παρακαλούμε ελέγξτε την σύνδεση σας στο διαδίκτυο και προσπαθήστε αργότερα.</string>

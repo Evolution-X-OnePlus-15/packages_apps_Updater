@@ -279,6 +279,11 @@ class ABUpdateInstaller {
         SystemProperties.set(Constants.KEEP_CURRENT_ABL_PROPERTY,
                 Boolean.toString(keepCurrentAbl));
 
+        boolean keepCurrentRecovery = preferences.getBoolean(
+                Constants.PREF_KEEP_CURRENT_RECOVERY, false);
+        SystemProperties.set(Constants.KEEP_CURRENT_RECOVERY_PROPERTY,
+                Boolean.toString(keepCurrentRecovery));
+
         applyPerformanceMode(mUserPreferencesRepository.getAbPerfModeBlocking());
 
         try {

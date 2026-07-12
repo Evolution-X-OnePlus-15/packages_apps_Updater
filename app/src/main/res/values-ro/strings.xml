@@ -61,10 +61,16 @@
     <string name="menu_metered_network_warning">Avertizare rețea contorizată</string>
     <string name="menu_metered_network_warning_summary">Avertizează înainte de a descărca pe date mobile</string>
     <string name="menu_ab_perf_mode">Proces update prioritar</string>
+<<<<<<< HEAD
     <string name="menu_ab_perf_mode_summary">Accelerează actualizările la costul performanței dispozitivului</string>
     <string name="menu_ab_perf_mode_summary_charging">Activat automat în timpul încărcării AC</string>
     <string name="menu_update_recovery">Actualizare recovery</string>
     <string name="menu_update_recovery_summary">Actualizare partiție de recuperare împreună cu OS</string>
+=======
+    <string name="menu_keep_current_abl">Păstrează ABL curent</string>
+    <string name="menu_update_recovery">Păstrează recovery curent</string>
+    <string name="toast_forced_update_recovery">Este imposibil să dezactivați actualizarea Evolution X Recovery pe acest dispozitiv.</string>
+>>>>>>> 820827b (Updater: Add option to preserve current recovery)
     <string name="snack_updates_found">Noi actualizări găsite</string>
     <string name="snack_no_updates_found">Nu s-au găsit actualizări noi</string>
     <string name="snack_download_failed">Descărcarea a eșuat. Vă rugăm să verificați conexiunea la internet și să încercați din nou mai târziu.</string>

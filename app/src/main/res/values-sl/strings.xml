@@ -61,10 +61,16 @@
     <string name="menu_metered_network_warning">Opozorilo merjenega omrežja</string>
     <string name="menu_metered_network_warning_summary">Opozori pred prenašanjem prek mobilnih podatkov</string>
     <string name="menu_ab_perf_mode">Daj prednost posodobitvenemu postopku</string>
+<<<<<<< HEAD
     <string name="menu_ab_perf_mode_summary">Pospeši posodobitve na račun zmogljivosti naprave</string>
     <string name="menu_ab_perf_mode_summary_charging">Omogoči samodejno med polnjenjem iz omrežnega polnilnika</string>
     <string name="menu_update_recovery">Posodobi obnovitev</string>
     <string name="menu_update_recovery_summary">Posodobi obnovitev skupaj z OS-om</string>
+=======
+    <string name="menu_keep_current_abl">Ohrani trenutni ABL</string>
+    <string name="menu_update_recovery">Ohrani trenutni recovery</string>
+    <string name="toast_forced_update_recovery">Ni mogoče onemogočiti posodobitev obnovitve Evolution X na tej napravi.</string>
+>>>>>>> 820827b (Updater: Add option to preserve current recovery)
     <string name="snack_updates_found">Najdene nove posodobitve</string>
     <string name="snack_no_updates_found">Ni najdenih novih posodobitev</string>
     <string name="snack_download_failed">Prenos ni uspel. Preverite svojo internetno povezavo in poskusite znova kasneje.</string>

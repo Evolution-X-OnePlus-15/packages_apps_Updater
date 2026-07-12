@@ -62,10 +62,16 @@ illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:
     <string name="menu_metered_network_warning">Mobiladat-költség figyelmeztetés</string>
     <string name="menu_metered_network_warning_summary">Figyelmeztetés mobilinterneten keresztül történő letöltés előtt</string>
     <string name="menu_ab_perf_mode">Állítsa fontossági sorrendbe a frissítési folyamatot</string>
+<<<<<<< HEAD
     <string name="menu_ab_perf_mode_summary">Frissítések felgyorsítása a készülék-teljesítmény rovására</string>
     <string name="menu_ab_perf_mode_summary_charging">Automatikusan engedélyezve hálózatról történő töltés közben</string>
     <string name="menu_update_recovery">Recovery-frissítés</string>
     <string name="menu_update_recovery_summary">Recovery partíció frissítése az operációs rendszerrel együtt</string>
+=======
+    <string name="menu_keep_current_abl">Jelenlegi ABL megtartása</string>
+    <string name="menu_update_recovery">Jelenlegi recovery megtartása</string>
+    <string name="toast_forced_update_recovery">Ezen a készüléken nem lehet letiltani a Evolution X Recovery frissítéseket.</string>
+>>>>>>> 820827b (Updater: Add option to preserve current recovery)
     <string name="snack_updates_found">Új frissítés érhető el</string>
     <string name="snack_no_updates_found">Nem található új frissítés</string>
     <string name="snack_download_failed">A letöltés meghiúsult. Ellenőrizze az internetkapcsolatát, majd próbálja újra.</string>

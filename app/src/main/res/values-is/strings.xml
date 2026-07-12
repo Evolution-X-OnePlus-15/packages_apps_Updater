@@ -48,10 +48,17 @@
     <string name="menu_metered_network_warning">Aðvörun á gjaldskyldu neti</string>
     <string name="menu_metered_network_warning_summary">Aðvara áður en gögn eru sótt í gegnum farsímagögn</string>
     <string name="menu_ab_perf_mode">Setja uppfærsluferli í forgang</string>
+<<<<<<< HEAD
     <string name="menu_ab_perf_mode_summary">Hraða uppfærslum á kostnað afkasta tækis</string>
     <string name="menu_ab_perf_mode_summary_charging">Virkjast sjálfkrafa þegar hlaðið er með riðstraumstengli</string>
     <string name="menu_update_recovery">Uppfæra endurheimtingu</string>
     <string name="menu_update_recovery_summary">Uppfæra endurheimtingardisksneið um leið og stýrikerfið</string>
+=======
+    <string name="menu_keep_current_abl">Halda núverandi ABL</string>
+    <string name="menu_update_recovery">Halda núverandi recovery</string>
+    <string name="toast_forced_update_recovery">Ekki er hægt að gera uppfærslur á endurheimtingu Evolution X óvirkar á þessu
+ tæki.</string>
+>>>>>>> 820827b (Updater: Add option to preserve current recovery)
     <string name="snack_updates_found">Nýjar uppfærslur fundust</string>
     <string name="snack_no_updates_found">Engar nýjar uppfærslur fundust</string>
     <string name="snack_download_failed">Niðurhal mistókst. Athugaðu internettenginguna og reyndu aftur síðar.</string>

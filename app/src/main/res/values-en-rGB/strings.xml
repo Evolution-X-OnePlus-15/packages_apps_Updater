@@ -62,12 +62,21 @@
     <string name="menu_metered_network_warning">Metered network warning</string>
     <string name="menu_metered_network_warning_summary">Warn before downloading over mobile data</string>
     <string name="menu_ab_perf_mode">Prioritise update process</string>
+<<<<<<< HEAD
     <string name="menu_ab_perf_mode_summary">Speed up updates at the cost of device performance</string>
     <string name="menu_ab_perf_mode_summary_charging">Enabled automatically while charging on AC power</string>
     <string name="menu_update_recovery">Update recovery</string>
     <string name="menu_update_recovery_summary">Update recovery partition along with the OS</string>
     <string name="snack_updates_found">New updates found</string>
     <string name="snack_no_updates_found">No new updates found</string>
+=======
+    <string name="menu_keep_current_abl">Keep current ABL</string>
+    <string name="menu_update_recovery">Keep current recovery</string>
+    <string name="toast_forced_update_recovery">It is impossible to disable Evolution X Recovery updates on this device.</string>
+    <string name="snack_no_updates_found">No new updates found</string>
+    <string name="snack_updates_found">New updates found</string>
+    <string name="snack_updates_check_failed">The update check failed. Please check your internet connection and try again later.</string>
+>>>>>>> 820827b (Updater: Add option to preserve current recovery)
     <string name="snack_download_failed">The download failed. Please check your internet connection and try again later.</string>
     <string name="snack_download_verification_failed">The update verification failed.</string>
     <string name="snack_download_verified">Download completed.</string>

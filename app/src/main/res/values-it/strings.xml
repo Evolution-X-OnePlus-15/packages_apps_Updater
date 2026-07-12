@@ -62,10 +62,16 @@
     <string name="menu_metered_network_warning">Avviso di rete a consumo</string>
     <string name="menu_metered_network_warning_summary">Avverti prima di scaricare con dati mobili</string>
     <string name="menu_ab_perf_mode">Agg. con priorità</string>
+<<<<<<< HEAD
     <string name="menu_ab_perf_mode_summary">Accelera gli aggiornamenti a scapito delle prestazioni del dispositivo</string>
     <string name="menu_ab_perf_mode_summary_charging">Attivato automaticamente durante la ricarica con alimentazione da rete elettrica</string>
     <string name="menu_update_recovery">Aggiornamento recovery</string>
     <string name="menu_update_recovery_summary">Aggiorna la partizione di recovery insieme al sistema operativo</string>
+=======
+    <string name="menu_keep_current_abl">Mantieni ABL attuale</string>
+    <string name="menu_update_recovery">Mantieni recovery attuale</string>
+    <string name="toast_forced_update_recovery">Impossibile disabilitare l\'aggiornamento di Evolution X Recovery su questo dispositivo</string>
+>>>>>>> 820827b (Updater: Add option to preserve current recovery)
     <string name="snack_updates_found">Nessun aggiornamento trovato</string>
     <string name="snack_no_updates_found">Nessun nuovo aggiornamento trovato</string>
     <string name="snack_download_failed">Il download dell\'aggiornamento è fallito. Controlla la connessione ad internet e riprova più tardi.</string>

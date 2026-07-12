@@ -61,10 +61,16 @@
     <string name="menu_metered_network_warning">按流量计费网络警告</string>
     <string name="menu_metered_network_warning_summary">使用移动数据下载前请发出警告</string>
     <string name="menu_ab_perf_mode">更新进程优先</string>
+<<<<<<< HEAD
     <string name="menu_ab_perf_mode_summary">加快更新速度，但会降低设备性能</string>
     <string name="menu_ab_perf_mode_summary_charging">使用交流电源充电时自动启用</string>
     <string name="menu_update_recovery">更新恢复模式</string>
     <string name="menu_update_recovery_summary">更新恢复分区以及操作系统</string>
+=======
+    <string name="menu_keep_current_abl">保留当前 ABL</string>
+    <string name="menu_update_recovery">保留当前恢复模式</string>
+    <string name="toast_forced_update_recovery">在此设备上禁用 Evolution X 恢复更新是不可能的。</string>
+>>>>>>> 820827b (Updater: Add option to preserve current recovery)
     <string name="snack_updates_found">找到新更新</string>
     <string name="snack_no_updates_found">没有找到新的更新</string>
     <string name="snack_download_failed">下载更新失败。 请您检查您的网络连接并稍后重试。</string>

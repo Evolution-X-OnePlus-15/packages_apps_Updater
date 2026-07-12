@@ -27,6 +27,7 @@
     <string name="menu_export_update">Allforio\'r diweddariad</string>
     <string name="menu_metered_network_warning">Rhybudd rhwydwaith mesuredig</string>
     <string name="menu_ab_perf_mode">Blaenoriaethu\'r broses diweddaru</string>
+    <string name="menu_keep_current_abl">Cadw\'r ABL presennol</string>
     <string name="menu_update_recovery">Adfer y modd diweddaru</string>
     <string name="snack_updates_found">Mae yna ddiweddariad(au) newydd</string>
     <string name="snack_no_updates_found">Ni chanfuwyd diweddariadau newydd</string>

@@ -34,7 +34,9 @@
     <string name="menu_export_update">Esportar l\'anovamientu</string>
     <string name="menu_metered_network_warning">Alvertir al tar nuna rede midida</string>
     <string name="menu_ab_perf_mode">Priorizar el procesu d\'anovamientu</string>
-    <string name="menu_update_recovery">Anovar el recovery</string>
+    <string name="menu_keep_current_abl">Caltener l\'ABL actual</string>
+    <string name="menu_update_recovery">Caltener el recovery actual</string>
+    <string name="toast_forced_update_recovery">Ye imposible desactivar los anovamientos del recovery de Evolution X nesti preséu.</string>
     <string name="snack_updates_found">Atopáronse anovamientos</string>
     <string name="snack_no_updates_found">Nun s\'atopó nengún anovamientu</string>
     <string name="snack_download_failed">La descarga falló. Comprueba la conexón a internet y volvi tentalo.</string>

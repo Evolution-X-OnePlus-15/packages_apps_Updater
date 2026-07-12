@@ -34,7 +34,13 @@
     <string name="menu_export_update">업데이트 내보내기</string>
     <string name="menu_metered_network_warning">모바일 데이터 사용 경고</string>
     <string name="menu_ab_perf_mode">우선 업데이트</string>
+<<<<<<< HEAD
     <string name="menu_update_recovery">복구 모드 업데이트</string>
+=======
+    <string name="menu_keep_current_abl">현재 ABL 유지</string>
+    <string name="menu_update_recovery">현재 복구 모드 유지</string>
+    <string name="toast_forced_update_recovery">이 기기에서는 Evolution X 복구 모드 업데이트를 비활성화할 수 없습니다.</string>
+>>>>>>> 820827b (Updater: Add option to preserve current recovery)
     <string name="snack_updates_found">새 업데이트 발견</string>
     <string name="snack_no_updates_found">새로운 업데이트 없음</string>
     <string name="snack_download_failed">다운로드에 실패했습니다. 인터넷 연결을 확인한 뒤 다시 시도해 주세요.</string>

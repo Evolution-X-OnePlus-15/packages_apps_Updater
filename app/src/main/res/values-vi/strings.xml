@@ -61,10 +61,16 @@
     <string name="menu_metered_network_warning">Cảnh báo mạng được đo lường</string>
     <string name="menu_metered_network_warning_summary">Cảnh báo trước khi tải xuống qua dữ liệu di động</string>
     <string name="menu_ab_perf_mode">Ưu tiên quá trình cập nhật</string>
+<<<<<<< HEAD
     <string name="menu_ab_perf_mode_summary">Tăng tốc độ cập nhật nhưng làm giảm hiệu năng của thiết bị</string>
     <string name="menu_ab_perf_mode_summary_charging">Tự động kích hoạt khi sạc bằng nguồn điện AC</string>
     <string name="menu_update_recovery">Cập nhật recovery</string>
     <string name="menu_update_recovery_summary">Cập nhật phân vùng phục hồi cùng với hệ điều hành</string>
+=======
+    <string name="menu_keep_current_abl">Giữ ABL hiện tại</string>
+    <string name="menu_update_recovery">Giữ recovery hiện tại</string>
+    <string name="toast_forced_update_recovery">Không thể tắt các bản cập nhật Evolution X Recovery trên thiết bị này.</string>
+>>>>>>> 820827b (Updater: Add option to preserve current recovery)
     <string name="snack_updates_found">Đã tìm thấy bản cập nhật mới</string>
     <string name="snack_no_updates_found">Không tìm thấy bản cập nhật mới</string>
     <string name="snack_download_failed">Tải xuống không thành công. Vui lòng kiểm tra kết nối internet của bạn và thử lại sau.</string>

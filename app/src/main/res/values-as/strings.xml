@@ -4,5 +4,7 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="menu_update_recovery">পুনৰুদ্ধাৰ আপডেট কৰক</string>
+    <string name="menu_keep_current_abl">বৰ্তমান ABL ৰাখক</string>
+    <string name="menu_update_recovery">বৰ্তমান পুনৰুদ্ধাৰ ৰাখক</string>
+    <string name="toast_forced_update_recovery">এই ডিভাইচত Evolution X পুনৰুদ্ধাৰ আপডেটসমূহ নিষ্ক্ৰিয় কৰাটো অসম্ভৱ।</string>
 </resources>
