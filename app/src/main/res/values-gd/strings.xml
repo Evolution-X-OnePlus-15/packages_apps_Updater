@@ -42,7 +42,8 @@
     <string name="menu_export_update">Às-phortaich an t-ùrachadh</string>
     <string name="menu_show_changelog">Seall loga nan atharraichean</string>
     <string name="menu_ab_perf_mode">Cuir prìomhachas air pròiseas an ùrachaidh</string>
-    <string name="menu_update_recovery">Ùraich an t-aiseag</string>
+    <string name="menu_keep_current_abl">Cum an ABL làithreach</string>
+    <string name="menu_update_recovery">Cum an t-aiseag làithreach</string>
     <string name="toast_forced_update_recovery">Cha ghabh ùrachadh air aiseag Evolution X a chur à comas air an uidheam seo.</string>
     <string name="snack_updates_found">Chaidh ùrachadh a lorg</string>
     <string name="snack_no_updates_found">Cha deach ùrachadh a lorg</string>

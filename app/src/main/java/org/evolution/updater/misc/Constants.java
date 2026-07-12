@@ -33,6 +33,7 @@ public final class Constants {
     public static final String PREF_AUTO_DELETE_UPDATES = "auto_delete_updates";
     public static final String PREF_AB_PERF_MODE = "ab_perf_mode";
     public static final String PREF_KEEP_CURRENT_ABL = "keep_current_abl";
+    public static final String PREF_KEEP_CURRENT_RECOVERY = "keep_current_recovery";
     public static final String PREF_METERED_NETWORK_WARNING = "pref_metered_network_warning";
     public static final String PREF_MOBILE_DATA_WARNING = "pref_mobile_data_warning";
     public static final String PREF_NEEDS_REBOOT_ID = "needs_reboot_id";
@@ -58,6 +59,8 @@ public final class Constants {
     // Read by update_engine after a successful payload application. When enabled,
     // update_engine copies the active-slot ABL to the updated slot before reboot.
     public static final String KEEP_CURRENT_ABL_PROPERTY = "persist.vendor.keep_current_abl";
+    public static final String KEEP_CURRENT_RECOVERY_PROPERTY =
+            "persist.vendor.keep_current_recovery";
 
     public static final String HAS_SEEN_INFO_DIALOG = "has_seen_info_dialog";
     public static final String HAS_SEEN_WELCOME_MESSAGE = "has_seen_welcome_message";

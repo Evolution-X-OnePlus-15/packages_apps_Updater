@@ -42,7 +42,8 @@
     <string name="menu_export_update">განახლების გატანა</string>
     <string name="menu_show_changelog">ცვლილებების ჩვენება</string>
     <string name="menu_ab_perf_mode">განახლებისთვის უპირატესობის მინიჭება</string>
-    <string name="menu_update_recovery">აღმდგენის განახლება</string>
+    <string name="menu_keep_current_abl">მიმდინარე ABL-ის შენარჩუნება</string>
+    <string name="menu_update_recovery">მიმდინარე აღდგენის შენარჩუნება</string>
     <string name="toast_forced_update_recovery">ვერ გაითიშება Lineage-აღმდგენის განახლებები ამ მოწყობილობაზე.</string>
     <string name="snack_updates_found">ნაპოვნია განახლებები</string>
     <string name="snack_no_updates_found">განახლებები ვერ მოიძებნა</string>

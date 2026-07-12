@@ -31,7 +31,8 @@
     <string name="menu_copy_url">Kopiraj URL</string>
     <string name="menu_export_update">Izvezi ažuriranje</string>
     <string name="menu_show_changelog">Prikaži promjene</string>
-    <string name="menu_update_recovery">Ažuriraj recovery</string>
+    <string name="menu_keep_current_abl">Zadrži trenutačni ABL</string>
+    <string name="menu_update_recovery">Zadrži trenutačni recovery</string>
     <string name="toast_forced_update_recovery">Nemoguće je onemogućiti ažuriranja Evolution X Recovery na ovom uređaju.</string>
     <string name="snack_updates_found">Pronađena su nova ažuriranja</string>
     <string name="snack_no_updates_found">Nema pronađenih novih ažuriranja</string>

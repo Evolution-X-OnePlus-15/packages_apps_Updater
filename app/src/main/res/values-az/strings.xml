@@ -48,7 +48,8 @@
     <string name="menu_export_update">Güncəlləməni xaricə köçür</string>
     <string name="menu_show_changelog">Dəyişiklik jurnalını göstər</string>
     <string name="menu_ab_perf_mode">Üstünlüyü güncəlləmə prosesinə ver</string>
-    <string name="menu_update_recovery">Geri qaytarma rejimini güncəllə</string>
+    <string name="menu_keep_current_abl">Cari ABL-i saxla</string>
+    <string name="menu_update_recovery">Cari bərpanı saxla</string>
     <string name="toast_forced_update_recovery">Bu cihazda Evolution X Geri qaytarma güncəlləmələrini sıradan çıxartmaq mümkün deyil.</string>
     <string name="snack_updates_found">Yeni güncəlləmə tapıldı</string>
     <string name="snack_no_updates_found">Yeni güncəlləmə tapılmadı</string>

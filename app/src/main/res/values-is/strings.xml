@@ -41,7 +41,8 @@
     <string name="menu_export_update">Flytja út uppfærslu</string>
     <string name="menu_show_changelog">Birta breytingaannál</string>
     <string name="menu_ab_perf_mode">Setja uppfærsluferli í forgang</string>
-    <string name="menu_update_recovery">Uppfæra endurheimtingu</string>
+    <string name="menu_keep_current_abl">Halda núverandi ABL</string>
+    <string name="menu_update_recovery">Halda núverandi recovery</string>
     <string name="toast_forced_update_recovery">Ekki er hægt að gera uppfærslur á endurheimtingu Evolution X óvirkar á þessu
  tæki.</string>
     <string name="snack_updates_found">Nýjar uppfærslur fundust</string>

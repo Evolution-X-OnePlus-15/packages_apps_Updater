@@ -38,7 +38,6 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
@@ -662,6 +661,7 @@ public class UpdatesActivity extends UpdatesListActivity implements UpdateImport
         if (!Utils.isABDevice()) {
             abPerfMode.setVisibility(View.GONE);
             keepCurrentAbl.setVisibility(View.GONE);
+            updateRecovery.setVisibility(View.GONE);
         } else if (!Utils.isKeepCurrentAblExecPresent()) {
             keepCurrentAbl.setEnabled(false);
         }
@@ -673,34 +673,7 @@ public class UpdatesActivity extends UpdatesListActivity implements UpdateImport
                 prefs.getBoolean(Constants.PREF_MOBILE_DATA_WARNING, false)));
         abPerfMode.setChecked(prefs.getBoolean(Constants.PREF_AB_PERF_MODE, true));
         keepCurrentAbl.setChecked(prefs.getBoolean(Constants.PREF_KEEP_CURRENT_ABL, false));
-
-        if (getResources().getBoolean(R.bool.config_hideRecoveryUpdate)) {
-            // Hide the update feature if explicitly requested.
-            // Might be the case of A-only devices using prebuilt vendor images.
-            updateRecovery.setVisibility(View.GONE);
-        } else if (Utils.isRecoveryUpdateExecPresent()) {
-            updateRecovery.setChecked(
-                    SystemProperties.getBoolean(Constants.UPDATE_RECOVERY_PROPERTY, false));
-        } else {
-            // There is no recovery updater script in the device, so the feature is considered
-            // forcefully enabled, just to avoid users to be confused and complain that
-            // recovery gets overwritten. That's the case of A/B and recovery-in-boot devices.
-            updateRecovery.setChecked(true);
-            updateRecovery.setOnTouchListener(new View.OnTouchListener() {
-                private Toast forcedUpdateToast = null;
-
-                @Override
-                public boolean onTouch(View v, MotionEvent event) {
-                    if (forcedUpdateToast != null) {
-                        forcedUpdateToast.cancel();
-                    }
-                    forcedUpdateToast = Toast.makeText(getApplicationContext(),
-                            getString(R.string.toast_forced_update_recovery), Toast.LENGTH_SHORT);
-                    forcedUpdateToast.show();
-                    return true;
-                }
-            });
-        }
+        updateRecovery.setChecked(prefs.getBoolean(Constants.PREF_KEEP_CURRENT_RECOVERY, false));
 
         new AlertDialog.Builder(this)
                 .setTitle(R.string.menu_preferences)
@@ -715,6 +688,8 @@ public class UpdatesActivity extends UpdatesListActivity implements UpdateImport
                             .putBoolean(Constants.PREF_AB_PERF_MODE, abPerfMode.isChecked())
                             .putBoolean(Constants.PREF_KEEP_CURRENT_ABL,
                                     keepCurrentAbl.isEnabled() && keepCurrentAbl.isChecked())
+                            .putBoolean(Constants.PREF_KEEP_CURRENT_RECOVERY,
+                                    updateRecovery.isEnabled() && updateRecovery.isChecked())
                             .apply();
 
                     if (Utils.isUpdateCheckEnabled(this)) {
@@ -727,11 +702,6 @@ public class UpdatesActivity extends UpdatesListActivity implements UpdateImport
                     if (Utils.isABDevice()) {
                         boolean enableABPerfMode = abPerfMode.isChecked();
                         mUpdaterService.getUpdaterController().setPerformanceMode(enableABPerfMode);
-                    }
-                    if (Utils.isRecoveryUpdateExecPresent()) {
-                        boolean enableRecoveryUpdate = updateRecovery.isChecked();
-                        SystemProperties.set(Constants.UPDATE_RECOVERY_PROPERTY,
-                                String.valueOf(enableRecoveryUpdate));
                     }
                 })
                 .show();

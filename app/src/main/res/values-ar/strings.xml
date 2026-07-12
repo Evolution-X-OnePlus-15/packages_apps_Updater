@@ -42,7 +42,8 @@
     <string name="menu_export_update">تصدير التحديث</string>
     <string name="menu_show_changelog">إظهار التغييرات</string>
     <string name="menu_ab_perf_mode">إعطاء الأولوية لعملية التحديث</string>
-    <string name="menu_update_recovery">تحديث وضع الاسترداد</string>
+    <string name="menu_keep_current_abl">الاحتفاظ بـ ABL الحالي</string>
+    <string name="menu_update_recovery">الاحتفاظ بوضع الاسترداد الحالي</string>
     <string name="toast_forced_update_recovery">من المستحيل تعطيل تحديثات Evolution X Recovery على هذا الجهاز</string>
     <string name="snack_updates_found">تم العثور على تحديثات جديدة</string>
     <string name="snack_no_updates_found">لا توجد تحديثات جديدة</string>

@@ -48,7 +48,8 @@
     <string name="menu_export_update">Izvozi posodobitev</string>
     <string name="menu_show_changelog">Prikaži dnevnik sprememb</string>
     <string name="menu_ab_perf_mode">Daj prednost posodobitvenemu postopku</string>
-    <string name="menu_update_recovery">Posodobi obnovitev</string>
+    <string name="menu_keep_current_abl">Ohrani trenutni ABL</string>
+    <string name="menu_update_recovery">Ohrani trenutni recovery</string>
     <string name="toast_forced_update_recovery">Ni mogoče onemogočiti posodobitev obnovitve Evolution X na tej napravi.</string>
     <string name="snack_updates_found">Najdene nove posodobitve</string>
     <string name="snack_no_updates_found">Ni najdenih novih posodobitev</string>

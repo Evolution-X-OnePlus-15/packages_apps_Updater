@@ -221,6 +221,11 @@ class ABUpdateInstaller {
         SystemProperties.set(Constants.KEEP_CURRENT_ABL_PROPERTY,
                 Boolean.toString(keepCurrentAbl));
 
+        boolean keepCurrentRecovery = preferences.getBoolean(
+                Constants.PREF_KEEP_CURRENT_RECOVERY, false);
+        SystemProperties.set(Constants.KEEP_CURRENT_RECOVERY_PROPERTY,
+                Boolean.toString(keepCurrentRecovery));
+
         boolean enableABPerfMode = PreferenceManager.getDefaultSharedPreferences(mContext)
                 .getBoolean(Constants.PREF_AB_PERF_MODE, false);
         mUpdateEngine.setPerformanceMode(enableABPerfMode);

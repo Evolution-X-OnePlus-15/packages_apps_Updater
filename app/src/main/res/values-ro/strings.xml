@@ -48,7 +48,8 @@
     <string name="menu_export_update">Exportează actualizarea</string>
     <string name="menu_show_changelog">Arată changelog</string>
     <string name="menu_ab_perf_mode">Proces update prioritar</string>
-    <string name="menu_update_recovery">Actualizare recovery</string>
+    <string name="menu_keep_current_abl">Păstrează ABL curent</string>
+    <string name="menu_update_recovery">Păstrează recovery curent</string>
     <string name="toast_forced_update_recovery">Este imposibil să dezactivați actualizarea Evolution X Recovery pe acest dispozitiv.</string>
     <string name="snack_updates_found">Noi actualizări găsite</string>
     <string name="snack_no_updates_found">Nu s-au găsit actualizări noi</string>

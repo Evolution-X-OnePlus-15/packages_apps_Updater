@@ -17,7 +17,8 @@
     <string name="menu_auto_updates_check_interval_never">Mitte kunagi</string>
     <string name="menu_show_changelog">Näita muutuste nimekirja</string>
     <string name="menu_ab_perf_mode">Eelista uuendusprotsessi</string>
-    <string name="menu_update_recovery">Uuenda taastust</string>
+    <string name="menu_keep_current_abl">Säilita praegune ABL</string>
+    <string name="menu_update_recovery">Säilita praegune taaste</string>
     <string name="toast_forced_update_recovery">Evolution X Recovery taastevärskendusi pole selles seadmes võimalik keelata.</string>
     <plurals name="eta_seconds">
         <item quantity="one">1 sekund jäänud</item>

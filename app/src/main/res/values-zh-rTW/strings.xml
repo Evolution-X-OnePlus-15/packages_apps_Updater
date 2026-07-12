@@ -48,7 +48,8 @@
     <string name="menu_export_update">匯出更新</string>
     <string name="menu_show_changelog">顯示更新日誌</string>
     <string name="menu_ab_perf_mode">優先更新過程</string>
-    <string name="menu_update_recovery">更新 Recovery</string>
+    <string name="menu_keep_current_abl">保留目前的 ABL</string>
+    <string name="menu_update_recovery">保留目前的 Recovery</string>
     <string name="toast_forced_update_recovery">無法停用此裝置上的 Evolution X Recovery 更新。</string>
     <string name="snack_updates_found">發現新的更新</string>
     <string name="snack_no_updates_found">沒有找到新的更新</string>

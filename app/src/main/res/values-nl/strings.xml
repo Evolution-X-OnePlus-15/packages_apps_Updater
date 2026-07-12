@@ -47,7 +47,8 @@
     <string name="menu_export_update">Update exporteren</string>
     <string name="menu_show_changelog">Changelog weergeven</string>
     <string name="menu_ab_perf_mode">Geef prioriteit aan het updateproces</string>
-    <string name="menu_update_recovery">Recovery bijwerken</string>
+    <string name="menu_keep_current_abl">Huidige ABL behouden</string>
+    <string name="menu_update_recovery">Huidige recovery behouden</string>
     <string name="toast_forced_update_recovery">Het is onmogelijk om Evolution X Recovery updates op dit apparaat uit te schakelen.</string>
     <string name="snack_updates_found">Nieuwe updates gevonden</string>
     <string name="snack_no_updates_found">Geen nieuwe updates gevonden</string>
