@@ -20,7 +20,6 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.BatteryManager;
-import android.os.PowerManager;
 import android.text.SpannableString;
 import android.text.format.Formatter;
 import android.text.method.LinkMovementMethod;
@@ -422,8 +421,7 @@ public class UpdatesListAdapter extends RecyclerView.Adapter<UpdatesListAdapter.
                 button.setText(R.string.reboot);
                 button.setEnabled(enabled);
                 clickListener = enabled ? view -> {
-                    PowerManager pm = mActivity.getSystemService(PowerManager.class);
-                    pm.reboot(null);
+                    mActivity.requestReboot();
                 } : null;
             }
             break;

@@ -409,6 +409,21 @@ public class Utils {
         return new File(Constants.UPDATE_RECOVERY_EXEC).exists();
     }
 
+    public static boolean isKeepCurrentAblExecPresent() {
+        return isABDevice();
+    }
+
+    public static String getDisplayVersion(String version) {
+        float floatVersion = 0;
+        try {
+            floatVersion = Float.parseFloat(version);
+        } catch (NumberFormatException ignored) {
+            // ignore
+        }
+        // Lineage 20 and up should only be integer values (we don't have minor versions anymore)
+        return (floatVersion >= 20) ? String.valueOf((int)floatVersion) : version;
+    }
+        
     public static String getMaintainer() {
         return mMaintainer;
     }

@@ -54,6 +54,14 @@
         android:textSize="16sp" />
 
     <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/preferences_keep_current_abl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/menu_keep_current_abl"
+        android:textSize="16sp" />
+
+    <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/preferences_update_recovery"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
