@@ -119,6 +119,8 @@
     <string name="menu_ab_perf_mode">Prioritize update process</string>
     <string name="menu_ab_perf_mode_summary">Speed up updates at the cost of device performance</string>
     <string name="menu_ab_perf_mode_summary_charging">Enabled automatically while charging on AC power</string>
+    <string name="menu_keep_current_abl">Keep current ABL</string>
+    <string name="keep_current_abl_unavailable">Keeping the current ABL is not supported on this device.</string>
     <string name="menu_update_recovery">Update recovery</string>
     <string name="menu_update_recovery_summary">Update recovery partition along with the OS</string>
 

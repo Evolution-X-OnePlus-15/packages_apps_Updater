@@ -173,4 +173,59 @@ public class Utils {
         StorageManager sm = (StorageManager) context.getSystemService(Context.STORAGE_SERVICE);
         return sm.isEncrypted(file);
     }
+    public static int getUpdateCheckSetting(Context context) {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
+        return preferences.getInt(Constants.PREF_AUTO_UPDATES_CHECK_INTERVAL,
+                Constants.AUTO_UPDATES_CHECK_INTERVAL_DAILY);
+    }
+    public static boolean isUpdateCheckEnabled(Context context) {
+        return getUpdateCheckSetting(context) != Constants.AUTO_UPDATES_CHECK_INTERVAL_NEVER;
+    }
+
+    public static long getUpdateCheckInterval(Context context) {
+        switch (Utils.getUpdateCheckSetting(context)) {
+            default:
+            case Constants.AUTO_UPDATES_CHECK_INTERVAL_DAILY:
+                return AlarmManager.INTERVAL_DAY;
+            case Constants.AUTO_UPDATES_CHECK_INTERVAL_WEEKLY:
+                return AlarmManager.INTERVAL_DAY * 7;
+            case Constants.AUTO_UPDATES_CHECK_INTERVAL_MONTHLY:
+                return AlarmManager.INTERVAL_DAY * 30;
+        }
+    }
+
+    public static boolean isRecoveryUpdateExecPresent() {
+        return new File(Constants.UPDATE_RECOVERY_EXEC).exists();
+    }
+
+    public static boolean isKeepCurrentAblExecPresent() {
+        return isABDevice();
+    }
+
+    public static String getDisplayVersion(String version) {
+        float floatVersion = 0;
+        try {
+            floatVersion = Float.parseFloat(version);
+        } catch (NumberFormatException ignored) {
+            // ignore
+        }
+        // Lineage 20 and up should only be integer values (we don't have minor versions anymore)
+        return (floatVersion >= 20) ? String.valueOf((int)floatVersion) : version;
+    }
+
+    public static String getMaintainer() {
+        return mMaintainer;
+    }
+
+    public static String getForum() {
+        return mForum;
+    }
+
+    public static String getFirmware() {
+        return mFirmware;
+    }
+
+    public static String getPaypal() {
+        return mPaypal;
+    }
 }

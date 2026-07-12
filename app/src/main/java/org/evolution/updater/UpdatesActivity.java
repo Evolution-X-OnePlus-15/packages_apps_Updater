@@ -15,6 +15,23 @@ import android.content.ServiceConnection;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.os.PowerManager;
+import android.os.SystemProperties;
+import android.util.Log;
+import android.util.TypedValue;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.RotateAnimation;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -191,11 +208,11 @@ public class UpdatesActivity extends UpdatesScaffoldActivity implements UpdateIm
     }
 
     private void handleDownloadStatusChange(String downloadId) {
-        if (Update.LOCAL_ID.equals(downloadId)) {
+        UpdateInfo update = mUpdaterService.getUpdaterController().getUpdate(downloadId);
+        if (update == null) {
             return;
         }
 
-        Update update = mUpdaterService.getUpdaterController().getUpdate(downloadId);
         switch (update.getStatus()) {
             case PAUSED_ERROR:
                 showToast(R.string.snack_download_failed, Toast.LENGTH_LONG);
@@ -206,7 +223,13 @@ public class UpdatesActivity extends UpdatesScaffoldActivity implements UpdateIm
             case VERIFIED:
                 showToast(R.string.snack_download_verified, Toast.LENGTH_LONG);
                 break;
+            case INSTALLED:
+                break;
         }
+    }
+
+    public void requestReboot() {
+        getSystemService(PowerManager.class).reboot(null);
     }
 
     @Override
@@ -231,5 +254,140 @@ public class UpdatesActivity extends UpdatesScaffoldActivity implements UpdateIm
 
     public void showToast(int stringId, int duration) {
         Toast.makeText(this, stringId, duration).show();
+    }
+    private void refreshAnimationStart() {
+        if (!mIsTV) {
+            if (mRefreshIconView == null) {
+                mRefreshIconView = findViewById(R.id.menu_refresh);
+            }
+            if (mRefreshIconView != null) {
+                mRefreshAnimation.setRepeatCount(Animation.INFINITE);
+                mRefreshIconView.startAnimation(mRefreshAnimation);
+                mRefreshIconView.setEnabled(false);
+            }
+        } else {
+            findViewById(R.id.recycler_view).setVisibility(View.GONE);
+            findViewById(R.id.no_new_updates_view).setVisibility(View.GONE);
+            findViewById(R.id.refresh_progress).setVisibility(View.VISIBLE);
+        }
+    }
+    private void refreshAnimationStop() {
+        if (!mIsTV) {
+            if (mRefreshIconView != null) {
+                mRefreshAnimation.setRepeatCount(0);
+                mRefreshIconView.setEnabled(true);
+            }
+        } else {
+            findViewById(R.id.refresh_progress).setVisibility(View.GONE);
+            if (mAdapter.getItemCount() > 0) {
+                findViewById(R.id.recycler_view).setVisibility(View.VISIBLE);
+            } else {
+                findViewById(R.id.no_new_updates_view).setVisibility(View.VISIBLE);
+            }
+        }
+    }
+
+    @SuppressLint("ClickableViewAccessibility")
+    private void showPreferencesDialog() {
+        View view = LayoutInflater.from(this).inflate(R.layout.preferences_dialog, null);
+        Spinner autoCheckInterval = view.findViewById(R.id.preferences_auto_updates_check_interval);
+        SwitchCompat autoDelete = view.findViewById(R.id.preferences_auto_delete_updates);
+        SwitchCompat meteredNetworkWarning = view.findViewById(
+                R.id.preferences_metered_network_warning);
+        SwitchCompat abPerfMode = view.findViewById(R.id.preferences_ab_perf_mode);
+        SwitchCompat keepCurrentAbl = view.findViewById(R.id.preferences_keep_current_abl);
+        SwitchCompat updateRecovery = view.findViewById(R.id.preferences_update_recovery);
+
+        if (!Utils.isABDevice()) {
+            abPerfMode.setVisibility(View.GONE);
+            keepCurrentAbl.setVisibility(View.GONE);
+        } else if (!Utils.isKeepCurrentAblExecPresent()) {
+            keepCurrentAbl.setEnabled(false);
+        }
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        autoCheckInterval.setSelection(Utils.getUpdateCheckSetting(this));
+        autoDelete.setChecked(prefs.getBoolean(Constants.PREF_AUTO_DELETE_UPDATES, false));
+        meteredNetworkWarning.setChecked(prefs.getBoolean(Constants.PREF_METERED_NETWORK_WARNING,
+                prefs.getBoolean(Constants.PREF_MOBILE_DATA_WARNING, false)));
+        abPerfMode.setChecked(prefs.getBoolean(Constants.PREF_AB_PERF_MODE, true));
+        keepCurrentAbl.setChecked(prefs.getBoolean(Constants.PREF_KEEP_CURRENT_ABL, false));
+
+        if (getResources().getBoolean(R.bool.config_hideRecoveryUpdate)) {
+            // Hide the update feature if explicitly requested.
+            // Might be the case of A-only devices using prebuilt vendor images.
+            updateRecovery.setVisibility(View.GONE);
+        } else if (Utils.isRecoveryUpdateExecPresent()) {
+            updateRecovery.setChecked(
+                    SystemProperties.getBoolean(Constants.UPDATE_RECOVERY_PROPERTY, false));
+        } else {
+            // There is no recovery updater script in the device, so the feature is considered
+            // forcefully enabled, just to avoid users to be confused and complain that
+            // recovery gets overwritten. That's the case of A/B and recovery-in-boot devices.
+            updateRecovery.setChecked(true);
+            updateRecovery.setOnTouchListener(new View.OnTouchListener() {
+                private Toast forcedUpdateToast = null;
+
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    if (forcedUpdateToast != null) {
+                        forcedUpdateToast.cancel();
+                    }
+                    forcedUpdateToast = Toast.makeText(getApplicationContext(),
+                            getString(R.string.toast_forced_update_recovery), Toast.LENGTH_SHORT);
+                    forcedUpdateToast.show();
+                    return true;
+                }
+            });
+        }
+
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.menu_preferences)
+                .setView(view)
+                .setOnDismissListener(dialogInterface -> {
+                    prefs.edit()
+                            .putInt(Constants.PREF_AUTO_UPDATES_CHECK_INTERVAL,
+                                    autoCheckInterval.getSelectedItemPosition())
+                            .putBoolean(Constants.PREF_AUTO_DELETE_UPDATES, autoDelete.isChecked())
+                            .putBoolean(Constants.PREF_METERED_NETWORK_WARNING,
+                                    meteredNetworkWarning.isChecked())
+                            .putBoolean(Constants.PREF_AB_PERF_MODE, abPerfMode.isChecked())
+                            .putBoolean(Constants.PREF_KEEP_CURRENT_ABL,
+                                    keepCurrentAbl.isEnabled() && keepCurrentAbl.isChecked())
+                            .apply();
+
+                    if (Utils.isUpdateCheckEnabled(this)) {
+                        UpdatesCheckReceiver.scheduleRepeatingUpdatesCheck(this);
+                    } else {
+                        UpdatesCheckReceiver.cancelRepeatingUpdatesCheck(this);
+                        UpdatesCheckReceiver.cancelUpdatesCheck(this);
+                    }
+
+                    if (Utils.isABDevice()) {
+                        boolean enableABPerfMode = abPerfMode.isChecked();
+                        mUpdaterService.getUpdaterController().setPerformanceMode(enableABPerfMode);
+                    }
+                    if (Utils.isRecoveryUpdateExecPresent()) {
+                        boolean enableRecoveryUpdate = updateRecovery.isChecked();
+                        SystemProperties.set(Constants.UPDATE_RECOVERY_PROPERTY,
+                                String.valueOf(enableRecoveryUpdate));
+                    }
+                })
+                .show();
+    }
+
+    private void maybeShowWelcomeMessage() {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean alreadySeen = preferences.getBoolean(Constants.HAS_SEEN_WELCOME_MESSAGE, false);
+        if (alreadySeen) {
+            return;
+        }
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.welcome_title)
+                .setMessage(R.string.welcome_message)
+                .setPositiveButton(R.string.info_dialog_ok, (dialog, which) -> preferences.edit()
+                        .putBoolean(Constants.HAS_SEEN_WELCOME_MESSAGE, true)
+                        .apply())
+                .show();
     }
 }

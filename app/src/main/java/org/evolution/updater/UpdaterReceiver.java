@@ -47,7 +47,9 @@ public class UpdaterReceiver extends BroadcastReceiver {
 
             SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
             String downloadId = pref.getString(Constants.PREF_NEEDS_REBOOT_ID, null);
-            pref.edit().remove(Constants.PREF_NEEDS_REBOOT_ID).apply();
+            pref.edit()
+                    .remove(Constants.PREF_NEEDS_REBOOT_ID)
+                    .apply();
 
             if (downloadId != null && isUpdateSuccessful(context)) {
                 Intent cleanupIntent = new Intent(context, UpdaterService.class);
